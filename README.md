@@ -82,6 +82,7 @@ print("Top 10 rows iris:", iris.show(10))
 ```
 Output:
 Top 10 rows of iris:
+
 +------------+-----------+------------+-----------+-------+
 |Sepal.Length|Sepal.Width|Petal.Length|Petal.Width|Species|
 +------------+-----------+------------+-----------+-------+
@@ -104,19 +105,6 @@ iris_df = iris.toPandas()
 # Show To 10 rows
 print("Top 10 rows pandas DataFrame of iris_df:", iris_df.head(10))
 ```
-Output:
-Top 10 rows of pandas DataFrame of iris_df:
-   Sepal.Length  Sepal.Width  Petal.Length  Petal.Width Species
-0           5.1          3.5           1.4          0.2  setosa
-1           4.9          3.0           1.4          0.2  setosa
-2           4.7          3.2           1.3          0.2  setosa
-3           4.6          3.1           1.5          0.2  setosa
-4           5.0          3.6           1.4          0.2  setosa
-5           5.4          3.9           1.7          0.4  setosa
-6           4.6          3.4           1.4          0.3  setosa
-7           5.0          3.4           1.5          0.2  setosa
-8           4.4          2.9           1.4          0.2  setosa
-9           4.9          3.1           1.5          0.1  setosa
 
 #### Split The Dataset Into Training and Testing Sets
 ```
@@ -174,10 +162,11 @@ print("Recall of the model:", recall)
 print("F1-score of the model:", f1_score)
 ```
 Output
-('Accuracy of the model:', 0.9666666666666667)
-('Precision of the model:', 0.9714285714285714)
-('Recall of the model:', 0.9666666666666667)
-('F1-score of the model:', 0.9672820512820512)
++ ('Accuracy of the model:', 0.9666666666666667)
++ ('Precision of the model:', 0.9714285714285714)
++ ('Recall of the model:', 0.9666666666666667)
++ ('F1-score of the model:', 0.9672820512820512)
+
 🔶 Insights: The outputs represent four key evaluation metrics for a classification model: accuracy, precision, recall and F1-score. Accuracy, at 96.67%, indicates that the model correctly predicted the majority of the test samples. Precision, slightly higher at 97.14%, reflects that when the model predicts a class, it is correct most of the time. Recall, identical to accuracy, signifies that the model successfully identifies most of the relevant cases across all classes. The F1-score, at 96.73%, balances precision and recall, suggesting a harmonious blend of both in terms of prediction reliability and class coverage. These metrics collectively demonstrate that the model performs exceptionally well across various aspects of classification accuracy.
 
 #### Precision model for best prediction since the highest percentage 97.14%
@@ -199,9 +188,10 @@ precision = metrics.precision_score(y_test, y_pred, average='weighted')
 print("Tuned Precision Score:", precision)
 ```
 Output
-('Best Hyperparameters:', {'min_samples_split': 2, 'n_estimators': 50, 'bootstrap': True, 'max_depth': 5, 'min_samples_leaf': 2})
-('Best Precision Score:', 0.9777083333333333)
-('Tuned Precision Score:', 0.9714285714285714)
++ ('Best Hyperparameters:', {'min_samples_split': 2, 'n_estimators': 50, 'bootstrap': True, 'max_depth': 5, 'min_samples_leaf': 2})
++ ('Best Precision Score:', 0.9777083333333333)
++ ('Tuned Precision Score:', 0.9714285714285714)
+
 🔶 Insights: The outputs represent an optimised precision RandomForestClassifier via GridSearchCV, targeting the highest weighted precision. The best hyperparameters achieved during the training are shown, including settings for sample splitting, estimator count, bootstrap usage and depth parameters. The best cross-validated precision score from the grid search is approximately 97.77%. The tuned model, tested on unseen data, yields a precision score of about 97.14%. This indicates that the model, when predicting, is highly accurate in terms of classifying instances correctly across different classes.
 
 #### F1-Score model for best prediction since second highest percentage 96.72%
@@ -223,9 +213,10 @@ f1_score = metrics.f1_score(y_test, y_pred, average='weighted')
 print("Tuned F1-Score:", f1_score)
 ```
 Output
-('Best Hyperparameters:', {'min_samples_split': 10, 'n_estimators': 10, 'bootstrap': True, 'max_depth': 5, 'min_samples_leaf': 4})
-('Best F1-Score:', 0.966506972559604)
-('Tuned F1-Score:', 0.9672820512820512)
++ ('Best Hyperparameters:', {'min_samples_split': 10, 'n_estimators': 10, 'bootstrap': True, 'max_depth': 5, 'min_samples_leaf': 4})
++ ('Best F1-Score:', 0.966506972559604)
++ ('Tuned F1-Score:', 0.9672820512820512)
+
 🔶 Insights: The provided code snippet employed GridSearchCV to optimise a RandomForestClassifier based on the weighted F1-Score, selecting parameters that best balance precision and recall. The grid search yields optimal hyperparameters focused on tree depth, sample splits, and the number of estimators. The best F1-Score from the training phase is approximately 96.65%. When applied to test data, the best estimator achieves a slightly higher F1-Score of about 96.73%, indicating effective generalisation and a robust ability to handle class imbalance and maintain accuracy across labels.
 
 #### Comparison Between Predicted Labels and Actual Labels
