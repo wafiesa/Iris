@@ -245,6 +245,7 @@ plt.show()
 ```
  
 ![Heatmap](https://drive.google.com/uc?export=view&id=1KxwqTQxK4K8wm5UiS62EEtRQIFVIIP-e)
+
 **Image 2: Confusion Matrix**
 
 🔶 Insights: The confusion matrix shows the classification results for three classes: setosa, versicolor and virginica. While setosa and versicolor are perfectly classified (11 and 12 correct predictions), virginica has 6 correct predictions but one instance is misclassified as versicolor. This indicates excellent model performance for setosa and versicolo meanwhile good for virginica.
