@@ -83,7 +83,7 @@ print("Top 10 rows iris:", iris.show(10))
 Output:
 Top 10 rows of iris:
 
-|------------|-----------|------------|-----------|-------|
+
 |Sepal.Length|Sepal.Width|Petal.Length|Petal.Width|Species|
 |------------|-----------|------------|-----------|-------|
 |         5.1|        3.5|         1.4|        0.2| setosa|
@@ -96,7 +96,7 @@ Top 10 rows of iris:
 |         5.0|        3.4|         1.5|        0.2| setosa|
 |         4.4|        2.9|         1.4|        0.2| setosa|
 |         4.9|        3.1|         1.5|        0.1| setosa|
-|------------|-----------|------------|-----------|-------|
+
 
 ```
 # Convert the Spark DataFrame to a pandas DataFrame
