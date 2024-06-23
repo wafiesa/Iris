@@ -211,6 +211,8 @@ y_pred = best_estimator_f1.predict(X_test)
 # Evaluate the performance of the Precision model
 f1_score = metrics.f1_score(y_test, y_pred, average='weighted')
 print("Tuned F1-Score:", f1_score)
+
+spark.stop()
 ```
 Output
 + ('Best Hyperparameters:', {'min_samples_split': 10, 'n_estimators': 10, 'bootstrap': True, 'max_depth': 5, 'min_samples_leaf': 4})
@@ -221,7 +223,7 @@ Output
 
 #### Comparison Between Predicted Labels and Actual Labels
 
-Performing confusion matrix can help us to understand the comparison between Predicted Labels and Actual Lables.
+Performing confusion matrix can help us to understand the comparison between Predicted Labels and Actual Lables. However, the confusion matrix best to visualise the predict and actual labels using Python Environment as the script below.
 
 Thus, we can write the code to generate best visualisation as below:
 
